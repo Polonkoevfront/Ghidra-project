@@ -1,0 +1,66 @@
+@import "../../../styles/variables.scss";
+
+.btn {
+  border: none;
+  border-radius: 40px;
+
+  &.default {
+    color: $color_septenary;
+    background: $main-gradient;
+  }
+
+  &.outline {
+    color: $color_senary;
+    background: none;
+    border: 2px solid $color_senary;
+  }
+
+  &.w154 {
+    width: 154px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  &.w155 {
+    width: 155px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  &.w214 {
+    width: 214px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  &.w250 {
+    width: 250px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  &.w276 {
+    width: 276px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  &.w292 {
+    width: 292px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  &.w295 {
+    width: 295px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &.h48 {
+    height: 48px;
+  }
+  &.h52 {
+    height: 52px;
+  }
+  &.h55 {
+    height: 55px;
+  }
+  &.h56 {
+    height: 56px;
+  }
+}
