@@ -20,7 +20,7 @@ export const NavBar = () => {
         </ul>
       </div>
       <div className={cls.buttons_bar}>
-        <Button>CONTACT US</Button>
+        <Button variant="outline">CONTACT US</Button>
         <Button>JOIN HYDRA</Button>
       </div>
     </nav>

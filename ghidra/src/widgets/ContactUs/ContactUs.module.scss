@@ -1,0 +1,45 @@
+@import "../../styles/variables.scss";
+
+.contact_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 89.7%;
+  height: 167px;
+  background: linear-gradient(
+    100deg,
+    $color_quaternary 10%,
+    lighten($color_quinary, 2%) 50%,
+    $color_quaternary 90%
+  );
+  border-radius: 90px;
+  margin: 7% 5.1%;
+
+  hr {
+    width: 1px;
+    height: 110px;
+    background: $color_tertiary;
+    border: none;
+    margin: 0;
+  }
+
+  div {
+    display: flex;
+
+    .contact_info {
+      display: flex;
+      flex-direction: column;
+      margin-left: 15px;
+
+      .contact_title {
+        color: $color_senary;
+        margin: 0;
+      }
+
+      span {
+        color: $color_senary;
+        margin-top: 10px;
+      }
+    }
+  }
+}

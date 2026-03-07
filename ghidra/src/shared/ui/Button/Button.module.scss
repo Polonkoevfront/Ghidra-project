@@ -3,6 +3,7 @@
 .btn {
   border: none;
   border-radius: 40px;
+  cursor: pointer;
 
   &.default {
     color: $color_septenary;
