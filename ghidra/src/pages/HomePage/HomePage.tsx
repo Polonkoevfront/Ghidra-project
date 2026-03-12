@@ -1,6 +1,6 @@
 import cls from "./HomePage.module.scss";
 import { Button, Text } from "../../shared/ui";
-import { ContactUs, NavBar } from "../../widgets";
+import { ContactUs, Footer, NavBar } from "../../widgets";
 
 import mask from "../../shared/assets/png/mask.png";
 import arrow_right from "../../shared/assets/svg/arrow_right.svg";
@@ -36,6 +36,8 @@ export const HomePage = () => {
 
         <ContactUs />
       </div>
+
+      <Footer />
     </div>
   );
 };

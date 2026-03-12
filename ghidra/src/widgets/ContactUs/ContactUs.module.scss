@@ -12,6 +12,12 @@
     lighten($color_quinary, 2%) 50%,
     $color_quaternary 90%
   );
+  background: linear-gradient(
+    100deg,
+    $color_quaternary 10%,
+    lighten($color_quinary, 2%) 50%,
+    $color_quaternary 90%
+  );
   border-radius: 90px;
   margin: 7% 5.1%;
 

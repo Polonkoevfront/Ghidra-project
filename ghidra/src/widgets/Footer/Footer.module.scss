@@ -1,0 +1,89 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  margin-left: 6%;
+  .footer_pages_bar {
+    display: flex;
+
+    hr {
+      height: 196px;
+      border: 3.5px solid;
+      border-image-source: linear-gradient(
+        to bottom,
+        $color_septenary 0%,
+        $color_secondary 20%,
+        $color_septenary 130%
+      );
+      border-image-slice: 1;
+      margin-top: 0;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        color: $color_senary;
+        font-size: 16px;
+        font-weight: 700;
+        list-style: none;
+        cursor: pointer;
+        margin-top: 25px;
+      }
+
+      li:first-child {
+        margin: 0;
+      }
+    }
+
+    .socialize_block {
+      margin-right: 7.11%;
+
+      span {
+        color: $color_senary;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .network_icons {
+        display: flex;
+        margin-top: 39px;
+        gap: 20px;
+
+        img {
+          cursor: pointer;
+        }
+      }
+
+      button {
+        margin-top: 49px;
+      }
+    }
+  }
+
+  .date_bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 73px;
+
+    hr {
+      width: 89.7%;
+      border: 1px solid;
+      border-image-source: linear-gradient(
+        100deg,
+        $color_septenary 10%,
+        lighten($color_secondary, 2%) 50%,
+        $color_septenary 90%
+      );
+      border-image-slice: 1;
+    }
+
+    span {
+      color: $color_senary;
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 49px;
+    }
+  }
+}
