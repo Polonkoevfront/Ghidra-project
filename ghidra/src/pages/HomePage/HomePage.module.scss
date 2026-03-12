@@ -57,5 +57,16 @@
         }
       }
     }
+
+    .cards_list {
+      border: 1px solid red;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 11px;
+      max-width: 1160px;
+      width: 100%;
+      padding: 0 8.4%;
+    }
   }
 }

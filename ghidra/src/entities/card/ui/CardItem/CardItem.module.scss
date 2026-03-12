@@ -1,0 +1,57 @@
+@import "../../../../styles/variables.scss";
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 310px;
+  height: 511px;
+  background: radial-gradient(#433d60, #211e2e);
+  border-radius: 40px;
+
+  .card_head {
+    margin-top: 37px;
+    img {
+      border-radius: 50%;
+    }
+    .card_title {
+      color: $color_senary;
+      text-align: center;
+      margin: 0;
+      margin-top: 34px;
+    }
+
+    hr {
+      width: 154px;
+      height: 1px;
+      background-color: $color_primary;
+      border: none;
+      margin-top: 17px;
+    }
+  }
+
+  .short_bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 21px;
+    div {
+      span {
+        display: block;
+        color: $color_senary;
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 5px;
+      }
+
+      span:first-child {
+        margin: 0;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      margin-top: 35px;
+    }
+  }
+}

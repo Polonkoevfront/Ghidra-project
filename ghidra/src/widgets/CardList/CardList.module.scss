@@ -1,0 +1,44 @@
+@import "../../styles/variables.scss";
+
+.cards_bar {
+  .list_head {
+    display: flex;
+    justify-content: space-around;
+
+    .list_title {
+      color: $color_senary;
+
+      & > * {
+        margin: 0;
+      }
+
+      div {
+        display: flex;
+
+        img {
+          margin-left: 18px;
+        }
+      }
+    }
+
+    .list_desc {
+      span {
+        display: block;
+        color: $color_senary;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .cards_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 11px;
+    max-width: 1160px;
+    width: 100%;
+    padding: 6.7% 5.5%;
+  }
+}
