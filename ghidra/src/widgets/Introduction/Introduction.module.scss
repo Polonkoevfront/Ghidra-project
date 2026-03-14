@@ -1,0 +1,74 @@
+@import "../../styles/variables.scss";
+
+section {
+  .head {
+    display: flex;
+    justify-content: space-around;
+
+    .head_title {
+      color: $color_senary;
+
+      & > * {
+        margin: 0;
+      }
+
+      div {
+        display: flex;
+
+        img {
+          margin-left: 18px;
+        }
+      }
+    }
+
+    .head_desc {
+      color: $color_senary;
+
+      span {
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .about_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 80px;
+
+    .about_text_container {
+      .about_title {
+        color: $color_senary;
+
+        & > * {
+          margin: 0;
+        }
+
+        h4 {
+          margin-top: 8px;
+        }
+      }
+
+      .about_desc {
+        span {
+          display: block;
+          color: $color_senary;
+          font-size: 16px;
+          font-weight: 400;
+          margin-top: 10px;
+        }
+
+        span:first-child {
+          margin-top: 30px;
+        }
+      }
+    }
+
+    button {
+      margin-top: 28px;
+    }
+  }
+}

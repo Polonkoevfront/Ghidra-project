@@ -11,7 +11,7 @@ import { Button } from "../../shared/ui";
 
 export const Footer = () => {
   return (
-    <div className={cls.footer}>
+    <footer className={cls.footer}>
       <div className={cls.footer_pages_bar}>
         <img src={logo} alt="" />
         <hr />
@@ -49,6 +49,6 @@ export const Footer = () => {
           2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED
         </span>
       </div>
-    </div>
+    </footer>
   );
 };
