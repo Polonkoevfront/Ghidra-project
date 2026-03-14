@@ -6,6 +6,7 @@ import {
   Footer,
   Introduction,
   NavBar,
+  Quetions,
 } from "../../widgets";
 
 import mask from "../../shared/assets/png/mask.png";
@@ -45,6 +46,8 @@ export const HomePage = () => {
         <Introduction />
 
         <CardList />
+
+        <Quetions />
       </div>
 
       <Footer />
