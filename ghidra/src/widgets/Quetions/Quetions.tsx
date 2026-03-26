@@ -13,7 +13,7 @@ const skillsInfo = [
 
 export const Quetions = () => {
   return (
-    <section>
+    <section className={cls.quetions}>
       <div className={cls.quetions_head}>
         <div className={cls.quetions_title}>
           <Text as="h1">HOW WE BUILD</Text>

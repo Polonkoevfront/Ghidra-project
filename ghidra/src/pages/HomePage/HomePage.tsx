@@ -7,6 +7,7 @@ import {
   Introduction,
   NavBar,
   Quetions,
+  Technologies,
 } from "../../widgets";
 
 import mask from "../../shared/assets/png/mask.png";
@@ -46,6 +47,8 @@ export const HomePage = () => {
         <Introduction />
 
         <CardList />
+
+        <Technologies />
 
         <Quetions />
       </div>
