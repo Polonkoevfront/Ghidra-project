@@ -5,3 +5,4 @@ export { CardList } from "./CardList/CardList";
 export { Introduction } from "./Introduction/Introduction";
 export { Quetions } from "./Quetions/Quetions";
 export { Technologies } from "./Technologies/Technologies";
+export { RegisterForm } from "./RegisterForm/RegisterForm";
