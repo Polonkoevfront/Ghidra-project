@@ -7,6 +7,7 @@ import {
   Introduction,
   NavBar,
   Quetions,
+  RegisterForm,
   Technologies,
 } from "../../widgets";
 
@@ -51,6 +52,8 @@ export const HomePage = () => {
         <Technologies />
 
         <Quetions />
+
+        <RegisterForm />
       </div>
 
       <Footer />
