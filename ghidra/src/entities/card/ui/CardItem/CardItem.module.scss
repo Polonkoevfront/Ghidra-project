@@ -8,6 +8,21 @@ article {
   height: 511px;
   background: radial-gradient(#433d60, #211e2e);
   border-radius: 40px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40%;
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transition: scale(0.5);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 
   .card_head {
     margin-top: 37px;

@@ -2,6 +2,7 @@
 
 .quetions {
   margin-top: 396px;
+
   .quetions_head {
     display: flex;
     justify-content: space-around;
@@ -17,6 +18,7 @@
         display: flex;
 
         img {
+          cursor: pointer;
           margin-left: 18px;
         }
       }
@@ -71,6 +73,7 @@
           width: auto;
           height: 22px;
           margin-top: 7px;
+          cursor: pointer;
         }
 
         div {
@@ -83,6 +86,7 @@
             font-weight: 700;
             line-height: 1.5;
             white-space: nowrap;
+            cursor: pointer;
           }
         }
       }
