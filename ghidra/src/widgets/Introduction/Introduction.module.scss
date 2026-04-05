@@ -1,9 +1,24 @@
 @import "../../styles/variables.scss";
 
 section {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40%;
+
   .head {
     display: flex;
     justify-content: space-around;
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transition: scale(0.5);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
 
     .head_title {
       color: $color_senary;
@@ -38,6 +53,18 @@ section {
     align-items: center;
     justify-content: space-around;
     margin-top: 80px;
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transition: scale(0.5);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
 
     .about_text_container {
       .about_title {
