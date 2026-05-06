@@ -1,10 +1,11 @@
-@import "../../../../styles/variables.scss";
+@import '../../../../styles/variables.scss';
 
 article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 310px;
+  width: 100%;
+  min-width: 310px;
   height: 511px;
   background: radial-gradient(#433d60, #211e2e);
   border-radius: 40px;
@@ -26,9 +27,12 @@ article {
 
   .card_head {
     margin-top: 37px;
+
     img {
       border-radius: 50%;
+      box-shadow: 0px 0px 1px 13px rgba(0, 0, 0, 0.25);
     }
+
     .card_title {
       color: $color_senary;
       text-align: center;
@@ -50,6 +54,7 @@ article {
     flex-direction: column;
     align-items: center;
     margin-top: 21px;
+
     div {
       span {
         display: block;

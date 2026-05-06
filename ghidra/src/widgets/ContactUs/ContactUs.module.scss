@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import '../../styles/variables.scss';
 
 .contact_bar {
   display: flex;
@@ -19,7 +19,7 @@
     $color_quaternary 90%
   );
   border-radius: 90px;
-  margin: 7% 5.1%;
+  margin: 0 5.1%;
 
   hr {
     width: 1px;

@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import '../../styles/variables.scss';
 
 .cards_bar {
   margin-top: 111px;
@@ -9,6 +9,7 @@
   .list_head {
     display: flex;
     justify-content: space-around;
+    margin: 0 -4%;
 
     @keyframes appear {
       from {
@@ -54,8 +55,8 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 11px;
-    max-width: 1160px;
+    max-width: 1300px;
     width: 100%;
-    padding: 6.7% 5.5%;
+    margin: 70px 5%;
   }
 }

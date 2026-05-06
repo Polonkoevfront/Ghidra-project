@@ -1,12 +1,12 @@
-import { Button, Text } from "../../shared/ui";
-import cls from "./Introduction.module.scss";
+import { Button, Text } from '../../shared/ui';
+import cls from './Introduction.module.scss';
 
-import mask from "../../shared/assets/png/mask2.png";
-import arrow from "../../shared/assets/svg/big_arrow.svg";
+import mask from '../../shared/assets/png/mask2.png';
+import arrow from '../../shared/assets/svg/big_arrow.svg';
 
 export const Introduction = () => {
   return (
-    <section>
+    <section className={cls.introduction}>
       <div className={cls.head}>
         <div className={cls.head_title}>
           <Text as="h1">INTRODUCTION</Text>

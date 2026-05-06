@@ -6,3 +6,4 @@ export { Introduction } from "./Introduction/Introduction";
 export { Quetions } from "./Quetions/Quetions";
 export { Technologies } from "./Technologies/Technologies";
 export { RegisterForm } from "./RegisterForm/RegisterForm";
+export { HomeBlock } from "./HomeBlock/HomeBlock";
