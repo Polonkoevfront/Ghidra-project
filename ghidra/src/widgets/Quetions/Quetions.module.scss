@@ -45,6 +45,12 @@
     margin: 100px auto;
     box-sizing: border-box;
 
+    .arrow_chevron {
+      img {
+        display: none;
+      }
+    }
+
     .skill_item {
       display: flex;
       flex: 1;
@@ -145,6 +151,10 @@
       align-items: center;
       padding: 0;
 
+      .arrow_chevron {
+        display: block;
+      }
+
       .skill_item {
         display: flex;
         flex-direction: column;
@@ -242,9 +252,11 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       row-gap: 50px;
-      flex: 1;
-      align-items: center;
       padding: 0;
+
+      .arrow_chevron {
+        display: none;
+      }
 
       .skill_item {
         display: flex;
@@ -345,6 +357,10 @@
       flex: 1;
       align-items: center;
       padding: 0;
+
+      .arrow_chevron {
+        display: block;
+      }
 
       .skill_item {
         display: flex;
@@ -459,6 +475,10 @@
         border-radius: 50%;
         cursor: pointer;
         margin-top: 200px;
+
+        img {
+          display: block !important;
+        }
       }
 
       .skill_item {
