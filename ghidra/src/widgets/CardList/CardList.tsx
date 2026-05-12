@@ -1,49 +1,47 @@
-import { CardItem } from "../../entities/card/ui";
-import cls from "./CardList.module.scss";
-import { Text } from "../../shared/ui";
+import React from 'react';
+import cls from './CardList.module.scss';
+import { CardItem } from '../../entities/card/ui';
+import { Text } from '../../shared/ui';
+import { Product } from '../../entities/card/types/types';
 
-import card_img from "../../shared/assets/png/card_img.png";
-import card_img2 from "../../shared/assets/png/card_img2.png";
-import card_img3 from "../../shared/assets/png/card_img3.png";
-import card_img4 from "../../shared/assets/png/card_img4.png";
-import big_arrow from "../../shared/assets/svg/big_arrow.svg";
-
-const cardsInfo = [
-  {
-    id: 1,
-    title: "SIMULATION",
-    desc: "Vitae sapien pellentesque habitant morbi",
-    desc2: "nunc. Viverra aliquet  porttitor rhoncus ",
-    desc3: "libero justo laoreet sit amet vitae.",
-    imageUrl: card_img,
-  },
-  {
-    id: 2,
-    title: "EDUCATION",
-    desc: "Vitae sapien pellentesque habitant morbi",
-    desc2: "nunc. Viverra aliquet  porttitor rhoncus ",
-    desc3: "libero justo laoreet sit amet vitae.",
-    imageUrl: card_img2,
-  },
-  {
-    id: 3,
-    title: "SELF-CARE",
-    desc: "Vitae sapien pellentesque habitant morbi",
-    desc2: "nunc. Viverra aliquet  porttitor rhoncus ",
-    desc3: "libero justo laoreet sit amet vitae.",
-    imageUrl: card_img3,
-  },
-  {
-    id: 4,
-    title: "OUTDOOR",
-    desc: "Vitae sapien pellentesque habitant morbi",
-    desc2: "nunc. Viverra aliquet  porttitor rhoncus ",
-    desc3: "libero justo laoreet sit amet vitae.",
-    imageUrl: card_img4,
-  },
-];
+import arrow_left from '../../shared/assets/svg/chevron_left.svg';
+import arrow_right from '../../shared/assets/svg/chevron_right.svg';
+import big_arrow from '../../shared/assets/svg/big_arrow.svg';
 
 export const CardList = () => {
+  const [products, setProducts] = React.useState<Product[]>([]);
+  const [isCurrent, setIsCurrent] = React.useState(0);
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 650);
+
+  React.useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 650);
+    window.addEventListener('resize', handleResize);
+
+    fetch('http://localhost:1080/api/products').then((res) =>
+      res
+        .json()
+        .then((data: Product[]) => {
+          console.log(data);
+          setProducts(data);
+        })
+        .catch((err) => {
+          console.log('error', err);
+        }),
+    );
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const nextSlide = () => {
+    setIsCurrent((prev) => (prev === products.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setIsCurrent((prev) => (prev === 0 ? products.length - 1 : prev - 1));
+  };
+
+  if (products.length === 0) return null;
+
   return (
     <div className={cls.cards_bar}>
       <div className={cls.list_head}>
@@ -74,16 +72,37 @@ export const CardList = () => {
         </div>
       </div>
       <div className={cls.cards_list}>
-        {cardsInfo.map((item) => (
-          <CardItem
-            key={item.id}
-            title={item.title}
-            description={item.desc}
-            description2={item.desc2}
-            description3={item.desc3}
-            imageUrl={item.imageUrl}
-          />
-        ))}
+        {isMobile ? (
+          <>
+            <div className={cls.chevron}>
+              <img onClick={prevSlide} src={arrow_left} alt="" />
+            </div>
+            <div className={cls.slider}>
+              <CardItem
+                key={products[isCurrent].id}
+                title={products[isCurrent].title}
+                description={products[isCurrent].desc}
+                description2={products[isCurrent].desc2}
+                description3={products[isCurrent].desc3}
+                imageUrl={products[isCurrent].imageUrl}
+              />
+            </div>
+            <div className={cls.chevron}>
+              <img onClick={nextSlide} src={arrow_right} alt="" />
+            </div>
+          </>
+        ) : (
+          products.map((item) => (
+            <CardItem
+              key={item.id}
+              title={item.title}
+              description={item.desc}
+              description2={item.desc2}
+              description3={item.desc3}
+              imageUrl={item.imageUrl}
+            />
+          ))
+        )}
       </div>
     </div>
   );

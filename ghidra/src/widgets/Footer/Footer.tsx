@@ -1,13 +1,13 @@
-import cls from "./Footer.module.scss";
+import cls from './Footer.module.scss';
 
-import logo from "../../shared/assets/png/logo_nav3.png";
-import facebook from "../../shared/assets/svg/facebook.svg";
-import twitter from "../../shared/assets/svg/twitter.svg";
-import linkedin from "../../shared/assets/svg/linkedin.svg";
-import youtube from "../../shared/assets/svg/youtube.svg";
-import instagram from "../../shared/assets/svg/instagram.svg";
-import pinterest from "../../shared/assets/svg/pinterest.svg";
-import { Button } from "../../shared/ui";
+import logo from '../../shared/assets/png/logo_nav3.png';
+import facebook from '../../shared/assets/svg/facebook.svg';
+import twitter from '../../shared/assets/svg/twitter.svg';
+import linkedin from '../../shared/assets/svg/linkedin.svg';
+import youtube from '../../shared/assets/svg/youtube.svg';
+import instagram from '../../shared/assets/svg/instagram.svg';
+import pinterest from '../../shared/assets/svg/pinterest.svg';
+import { Button } from '../../shared/ui';
 
 export const Footer = () => {
   return (

@@ -25,7 +25,7 @@ export const HomeBlock = () => {
         </div>
         <div className={cls.btns_bar}>
           <Button width={214}>BUILD YOUR WORLD</Button>
-          <img src={arrow} alt="" />
+          <img className={cls.arrow_icon} src={arrow} alt="" />
         </div>
       </div>
       <img src={mask} alt="" />

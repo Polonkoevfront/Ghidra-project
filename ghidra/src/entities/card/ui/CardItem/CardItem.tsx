@@ -1,10 +1,10 @@
-import { Button, Text } from "../../../../shared/ui";
-import cls from "./CardItem.module.scss";
+import { Button, Text } from '../../../../shared/ui';
+import cls from './CardItem.module.scss';
 
-import card_img from "../../../../shared/assets/png/card_img.png";
-import { FC } from "react";
+import card_img from '../../../../shared/assets/png/card_img.png';
+import { FC } from 'react';
 
-interface CardProps {
+interface CardItemProps {
   title: string;
   description: string;
   description2: string;
@@ -12,7 +12,7 @@ interface CardProps {
   imageUrl: string;
 }
 
-export const CardItem: FC<CardProps> = (props) => {
+export const CardItem: FC<CardItemProps> = (props) => {
   const { title, description, description2, description3, imageUrl } = props;
   return (
     <article>

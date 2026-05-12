@@ -1,0 +1,49 @@
+[
+  {
+    "httpRequest": {
+      "path": "/api/products",
+      "method": "GET"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": {
+        "Content-Type": ["application/json"],
+        "Access-Control-Allow-Origin": ["*"]
+      },
+      "body": [
+        {
+          "id": 1,
+          "title": "SIMULATION",
+          "desc": "Vitae sapien pellentesque habitant morbi",
+          "desc2": "nunc. Viverra aliquet porttitor rhoncus ",
+          "desc3": "libero justo laoreet sit amet vitae.",
+          "imageUrl": "/assets/png/card_img.png"
+        },
+        {
+          "id": 2,
+          "title": "EDUCATION",
+          "desc": "Vitae sapien pellentesque habitant morbi",
+          "desc2": "nunc. Viverra aliquet porttitor rhoncus ",
+          "desc3": "libero justo laoreet sit amet vitae.",
+          "imageUrl": "/assets/png/card_img2.png"
+        },
+        {
+          "id": 3,
+          "title": "SELF-CARE",
+          "desc": "Vitae sapien pellentesque habitant morbi",
+          "desc2": "nunc. Viverra aliquet porttitor rhoncus ",
+          "desc3": "libero justo laoreet sit amet vitae.",
+          "imageUrl": "/assets/png/card_img3.png"
+        },
+        {
+          "id": 4,
+          "title": "OUTDOOR",
+          "desc": "Vitae sapien pellentesque habitant morbi",
+          "desc2": "nunc. Viverra aliquet porttitor rhoncus ",
+          "desc3": "libero justo laoreet sit amet vitae.",
+          "imageUrl": "/assets/png/card_img4.png"
+        }
+      ]
+    }
+  }
+]

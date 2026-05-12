@@ -12,7 +12,8 @@
       h1,
       h2 {
         span {
-          color: $main-gradient;
+          color: $color_secondary;
+          $color_end: lighten($color_primary, 20%);
         }
       }
 
@@ -46,5 +47,235 @@
   img[src*='mask'] {
     border-radius: 95px 95px 95px 235px;
     box-shadow: 0px 0px 1px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 1040px) {
+  .home_block {
+    display: flex;
+    justify-content: space-between;
+    padding: 110px 5.4%;
+
+    .text_bar {
+      .title {
+        color: $color_senary;
+
+        h1,
+        h2 {
+          font-size: 40px;
+
+          span {
+            color: $main-gradient;
+          }
+        }
+
+        h2 {
+          margin-top: -15px;
+        }
+      }
+
+      .desc {
+        padding-bottom: 66px;
+
+        span {
+          display: block;
+          color: $color_senary;
+          font-size: 14px;
+          font-weight: 400;
+          margin-top: 10px;
+        }
+      }
+
+      .btns_bar {
+        display: flex;
+        align-items: center;
+
+        img {
+          cursor: pointer;
+          padding-left: 40px;
+        }
+      }
+    }
+
+    img[src*='mask'] {
+      max-width: 430px;
+      width: 100%;
+      border-radius: 95px 95px 95px 235px;
+      box-shadow: 0px 0px 1px 16px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+@media (max-width: 1040px) and (min-width: 920px) {
+  .home_block {
+    display: flex;
+    justify-content: space-between;
+    padding: 110px 5.4%;
+
+    .text_bar {
+      .title {
+        color: $color_senary;
+
+        h1,
+        h2 {
+          font-size: 35px;
+
+          span {
+            color: $main-gradient;
+          }
+        }
+
+        h2 {
+          margin-top: -15px;
+        }
+      }
+
+      .desc {
+        padding-bottom: 45px;
+
+        span {
+          display: block;
+          color: $color_senary;
+          font-size: 13px;
+          font-weight: 400;
+          margin-top: 10px;
+        }
+      }
+
+      .btns_bar {
+        display: flex;
+        align-items: center;
+
+        img {
+          cursor: pointer;
+          padding-left: 40px;
+        }
+      }
+    }
+
+    img[src*='mask'] {
+      max-width: 430px;
+      width: 100%;
+      border-radius: 95px 95px 95px 235px;
+      box-shadow: 0px 0px 1px 16px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+@media (max-width: 920px) and (min-width: 550px) {
+  .home_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 110px 5.4%;
+
+    .text_bar {
+      .title {
+        color: $color_senary;
+
+        h1,
+        h2 {
+          font-size: 46px;
+
+          span {
+            color: $main-gradient;
+          }
+        }
+
+        h2 {
+          margin-top: -15px;
+        }
+      }
+
+      .desc {
+        display: none;
+      }
+
+      .btns_bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+          width: 292px;
+        }
+
+        .arrow_icon {
+          display: none;
+        }
+      }
+    }
+
+    img[src*='mask'] {
+      order: -1;
+      max-width: 430px;
+      width: 100%;
+      border-radius: 95px 95px 95px 235px;
+      box-shadow: 0px 0px 1px 16px rgba(0, 0, 0, 0.15);
+      margin-top: 39px;
+    }
+  }
+}
+
+@media (max-width: 550px) and (min-width: 390px) {
+  .home_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 110px 5.4%;
+
+    .text_bar {
+      margin-top: 39px;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $color_senary;
+
+        h1,
+        h2 {
+          font-size: 30px;
+
+          span {
+            color: $main-gradient;
+          }
+        }
+
+        h2 {
+          margin-top: -15px;
+        }
+      }
+
+      .desc {
+        display: none;
+      }
+
+      .btns_bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+
+        button {
+          width: 292px;
+          height: 52px;
+        }
+
+        .arrow_icon {
+          display: none;
+        }
+      }
+    }
+
+    img[src*='mask'] {
+      order: -1;
+      max-width: 318px;
+      width: 100%;
+      border-radius: 95px 95px 95px 235px;
+      box-shadow: 0px 0px 1px 16px rgba(0, 0, 0, 0.15);
+    }
   }
 }

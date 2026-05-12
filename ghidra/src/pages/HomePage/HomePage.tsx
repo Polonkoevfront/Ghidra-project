@@ -1,4 +1,4 @@
-import cls from "./HomePage.module.scss";
+import cls from './HomePage.module.scss';
 import {
   CardList,
   ContactUs,
@@ -9,7 +9,7 @@ import {
   Quetions,
   RegisterForm,
   Technologies,
-} from "../../widgets";
+} from '../../widgets';
 
 export const HomePage = () => {
   return (

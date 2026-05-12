@@ -1,8 +1,8 @@
-import { Button } from "../../shared/ui";
-import cls from "./NavBar.module.scss";
+import { Button } from '../../shared/ui';
+import cls from './NavBar.module.scss';
 
-import logo_nav1 from "../../shared/assets/png/logo_nav1.png";
-import logo_nav2 from "../../shared/assets/png/logo_nav2.png";
+import logo_nav1 from '../../shared/assets/png/logo_nav1.png';
+import logo_nav2 from '../../shared/assets/png/logo_nav2.png';
 
 export const NavBar = () => {
   return (

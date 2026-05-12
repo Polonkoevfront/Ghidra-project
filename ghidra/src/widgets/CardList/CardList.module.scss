@@ -8,8 +8,8 @@
 
   .list_head {
     display: flex;
-    justify-content: space-around;
-    margin: 0 -4%;
+    justify-content: space-between;
+    padding: 0 5%;
 
     @keyframes appear {
       from {
@@ -55,8 +55,216 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 11px;
-    max-width: 1300px;
-    width: 100%;
+    width: 90%;
     margin: 70px 5%;
+
+    .chevron {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 920px) {
+  .cards_bar {
+    margin-top: 111px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+
+    .list_head {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 5%;
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transition: scale(0.5);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .list_title {
+        color: $color_senary;
+
+        & > * {
+          margin: 0;
+        }
+
+        div {
+          display: flex;
+
+          img {
+            margin-left: 18px;
+          }
+        }
+      }
+
+      .list_desc {
+        span {
+          display: block;
+          color: $color_senary;
+          font-size: 16px;
+          font-weight: 400;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .cards_list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 11px;
+      row-gap: 11px;
+      border: 1px solid red;
+      width: 90%;
+      margin: 70px 5%;
+    }
+  }
+}
+
+@media (max-width: 920px) and (min-width: 650px) {
+  .cards_bar {
+    margin-top: 111px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+
+    .list_head {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 5%;
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transition: scale(0.5);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .list_title {
+        color: $color_senary;
+
+        & > * {
+          margin: 0;
+        }
+
+        div {
+          display: flex;
+
+          img {
+            margin-left: 18px;
+          }
+        }
+      }
+
+      .list_desc {
+        span {
+          display: block;
+          color: $color_senary;
+          font-size: 16px;
+          font-weight: 400;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .cards_list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 11px;
+      row-gap: 11px;
+      width: 90%;
+      margin: 70px 5%;
+    }
+  }
+}
+
+@media (max-width: 650px) and (min-width: 390px) {
+  .cards_bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 111px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+
+    .list_head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transition: scale(0.5);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .list_title {
+        color: $color_senary;
+
+        & > * {
+          margin: 0;
+        }
+
+        div {
+          display: flex;
+
+          img {
+            display: none;
+          }
+        }
+      }
+
+      .list_desc {
+        span {
+          display: none;
+        }
+      }
+    }
+
+    .cards_list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+
+      .slider {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .chevron {
+        display: block;
+        width: 39px;
+        height: 39px;
+        background: $main-gradient;
+        border-radius: 50%;
+        margin: 0 -50px;
+        z-index: 10;
+        cursor: pointer;
+      }
+    }
   }
 }

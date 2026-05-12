@@ -8,7 +8,9 @@
 
   .head {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 5%;
+
     @keyframes appear {
       from {
         opacity: 0;
@@ -52,8 +54,14 @@
   .about_bar {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 5%;
     margin-top: 80px;
+
+    img[src*='mask'] {
+      max-width: 530px;
+      width: 100%;
+    }
 
     @keyframes appear {
       from {
@@ -97,6 +105,451 @@
 
     button {
       margin-top: 28px;
+    }
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 1080px) {
+  .introduction {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    margin-top: 100px;
+
+    .head {
+      display: flex;
+      justify-content: space-around;
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transition: scale(0.5);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .head_title {
+        color: $color_senary;
+
+        h1,
+        h2 {
+          font-size: 33px;
+        }
+
+        & > * {
+          margin: 0;
+        }
+
+        div {
+          display: flex;
+
+          img {
+            margin-left: 18px;
+          }
+        }
+      }
+
+      .head_desc {
+        color: $color_senary;
+
+        span {
+          display: block;
+          font-size: 15px;
+          font-weight: 400;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .about_bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 80px;
+
+      img[src*='mask'] {
+        max-width: 430px;
+        width: 100%;
+      }
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transition: scale(0.5);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .about_text_container {
+        .about_title {
+          color: $color_senary;
+
+          & > * {
+            margin: 0;
+          }
+
+          h3,
+          h4 {
+            font-size: 33px;
+          }
+
+          h4 {
+            margin-top: 8px;
+          }
+        }
+
+        .about_desc {
+          span {
+            display: block;
+            color: $color_senary;
+            font-size: 15px;
+            font-weight: 400;
+            margin-top: 10px;
+          }
+
+          span:first-child {
+            margin-top: 30px;
+          }
+        }
+      }
+
+      button {
+        margin-top: 28px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) and (min-width: 920px) {
+  .introduction {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    margin-top: 100px;
+
+    .head {
+      display: flex;
+      justify-content: space-around;
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transition: scale(0.5);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .head_title {
+        color: $color_senary;
+
+        h1,
+        h2 {
+          font-size: 28px;
+        }
+
+        & > * {
+          margin: 0;
+        }
+
+        div {
+          display: flex;
+
+          img {
+            margin-left: 18px;
+          }
+        }
+      }
+
+      .head_desc {
+        color: $color_senary;
+
+        span {
+          display: block;
+          font-size: 13px;
+          font-weight: 400;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .about_bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 80px;
+
+      img[src*='mask'] {
+        max-width: 400px;
+        width: 100%;
+      }
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transition: scale(0.5);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .about_text_container {
+        .about_title {
+          color: $color_senary;
+
+          & > * {
+            margin: 0;
+          }
+
+          h3,
+          h4 {
+            font-size: 28px;
+          }
+
+          h4 {
+            margin-top: 8px;
+          }
+        }
+
+        .about_desc {
+          span {
+            display: block;
+            color: $color_senary;
+            font-size: 13px;
+            font-weight: 400;
+            margin-top: 10px;
+          }
+
+          span:first-child {
+            margin-top: 30px;
+          }
+        }
+      }
+
+      button {
+        margin-top: 28px;
+      }
+    }
+  }
+}
+
+@media (max-width: 920px) and (min-width: 550px) {
+  .introduction {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    margin-top: 100px;
+
+    .head {
+      display: flex;
+      justify-content: space-around;
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transition: scale(0.5);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .head_title {
+        color: $color_senary;
+
+        h1,
+        h2 {
+          font-size: 28px;
+        }
+
+        & > * {
+          margin: 0;
+        }
+
+        div {
+          display: flex;
+
+          img {
+            display: none;
+          }
+        }
+      }
+
+      .head_desc {
+        display: none;
+      }
+    }
+
+    .about_bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 80px;
+
+      img[src*='mask'] {
+        max-width: 400px;
+        width: 100%;
+      }
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transition: scale(0.5);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .about_text_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .about_title {
+          display: none;
+        }
+
+        .about_desc {
+          span {
+            display: block;
+            color: $color_senary;
+            font-size: 13px;
+            font-weight: 400;
+            margin-top: 10px;
+          }
+
+          span:first-child {
+            margin-top: 30px;
+          }
+        }
+      }
+
+      button {
+        width: 276px;
+        height: 56px;
+        margin-top: 28px;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) and (min-width: 390px) {
+  .introduction {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    margin-top: 100px;
+
+    .head {
+      display: flex;
+      justify-content: space-around;
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transition: scale(0.5);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .head_title {
+        color: $color_senary;
+
+        h1,
+        h2 {
+          font-size: 26px;
+        }
+
+        & > * {
+          margin: 0;
+        }
+
+        div {
+          display: flex;
+
+          img {
+            display: none;
+          }
+        }
+      }
+
+      .head_desc {
+        display: none;
+      }
+    }
+
+    .about_bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 80px;
+
+      img[src*='mask'] {
+        max-width: 336px;
+        width: 100%;
+      }
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transition: scale(0.5);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .about_text_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .about_title {
+          display: none;
+        }
+
+        .about_desc {
+          margin-top: 40px;
+          span {
+            display: block;
+            color: $color_senary;
+            font-size: 12px;
+            font-weight: 400;
+            margin-top: 10px;
+          }
+
+          span:first-child {
+            margin-top: 30px;
+          }
+        }
+      }
+
+      button {
+        width: 276px;
+        height: 56px;
+        margin-top: 34px;
+      }
     }
   }
 }

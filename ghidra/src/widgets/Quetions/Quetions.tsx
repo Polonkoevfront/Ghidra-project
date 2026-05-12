@@ -1,17 +1,34 @@
-import { Text } from "../../shared/ui";
-import cls from "./Quetions.module.scss";
+import cls from './Quetions.module.scss';
+import { Text } from '../../shared/ui';
+import { useState } from 'react';
 
-import arrow from "../../shared/assets/svg/big_arrow.svg";
-import arrow2 from "../../shared/assets/svg/shape.svg";
+import arrow from '../../shared/assets/svg/big_arrow.svg';
+import arrow2 from '../../shared/assets/svg/shape.svg';
+import left from '../../shared/assets/svg/chevron_left.svg';
+import right from '../../shared/assets/svg/chevron_right.svg';
 
 const skillsInfo = [
-  { num: "01", title: "3D Conception", title2: "& Design" },
-  { num: "02", title: "Interaction", title2: "Design" },
-  { num: "03", title: "VR World", title2: "User Testing" },
-  { num: "04", title: "Hydra VR", title2: "Deploy" },
+  { num: '01', title: '3D Conception', title2: '& Design' },
+  { num: '02', title: 'Interaction', title2: 'Design' },
+  { num: '03', title: 'VR World', title2: 'User Testing' },
+  { num: '04', title: 'Hydra VR', title2: 'Deploy' },
 ];
 
 export const Quetions = () => {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentQuestion((prev) =>
+      prev === skillsInfo.length - 1 ? 0 : prev + 1,
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentQuestion((prev) =>
+      prev === 0 ? skillsInfo.length - 1 : prev - 1,
+    );
+  };
+
   return (
     <section className={cls.quetions}>
       <div className={cls.quetions_head}>
@@ -46,8 +63,14 @@ export const Quetions = () => {
       </div>
 
       <div className={cls.skills_block}>
+        <div onClick={prevSlide} className={cls.arrow_chevron}>
+          <img src={left} alt="" />
+        </div>
         {skillsInfo.map((item, key) => (
-          <div className={cls.skill_item} key={key}>
+          <div
+            key={key}
+            className={`${cls.skill_item} ${currentQuestion === key ? cls.active : ''}`}
+          >
             <div className={cls.circle}>
               <p>{item.num}</p>
             </div>
@@ -61,6 +84,9 @@ export const Quetions = () => {
             </div>
           </div>
         ))}
+        <div onClick={nextSlide} className={cls.arrow_chevron}>
+          <img src={right} alt="" />
+        </div>
       </div>
     </section>
   );

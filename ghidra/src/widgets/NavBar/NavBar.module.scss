@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import '../../styles/variables.scss';
 
 nav {
   display: flex;
@@ -30,7 +30,7 @@ nav {
         cursor: pointer;
 
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           width: 100%;
           height: 2px;
@@ -54,6 +54,195 @@ nav {
 
     button {
       margin-left: 48px;
+    }
+  }
+}
+
+@media (max-width: 1006px) and (min-width: 768px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+
+    .logo_bar {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .pages_nav_bar {
+      ul {
+        display: flex;
+        list-style: none;
+        gap: 42px;
+
+        li {
+          display: inline-block;
+          color: $color_senary;
+          font-size: 12px;
+          font-weight: 700;
+          text-decoration: none;
+          position: relative;
+          cursor: pointer;
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            top: 15px;
+            left: 0;
+            background-color: $color_primary;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease-out;
+          }
+
+          &:hover::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+
+    .buttons_bar {
+      display: block;
+      width: 43px;
+      height: 43px;
+      background-image: url(../../shared/assets/png/burger_button.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      margin-top: 15px;
+
+      button {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) and (min-width: 600px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+
+    .logo_bar {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .pages_nav_bar {
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        list-style: none;
+        column-gap: 42px;
+        row-gap: 20px;
+
+        li {
+          &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            top: 15px;
+            left: 0;
+            background-color: $color_primary;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease-out;
+          }
+
+          &:hover::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+
+    .buttons_bar {
+      display: block;
+      width: 43px;
+      height: 43px;
+      background-image: url(../../shared/assets/png/burger_button.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      margin-top: 15px;
+
+      button {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) and (min-width: 390px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+
+    .logo_bar {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .pages_nav_bar {
+      ul {
+        display: flex;
+        list-style: none;
+        gap: 42px;
+
+        li {
+          display: none;
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            top: 15px;
+            left: 0;
+            background-color: $color_primary;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease-out;
+          }
+
+          &:hover::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+
+    .buttons_bar {
+      display: block;
+      width: 43px;
+      height: 43px;
+      background-image: url(../../shared/assets/png/burger_button.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      margin-top: 15px;
+
+      button {
+        display: none;
+      }
     }
   }
 }

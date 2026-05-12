@@ -1,11 +1,11 @@
-import { Text } from "../../shared/ui";
-import cls from "./Technologies.module.scss";
+import { Text } from '../../shared/ui';
+import cls from './Technologies.module.scss';
 
-import unity_icon from "../../shared/assets/png/unity_icon.png";
-import oculus_icon from "../../shared/assets/png/oculus_icon.png";
-import vive_icon from "../../shared/assets/png/vive_icon.png";
-import unreal_icon from "../../shared/assets/png/unreal_icon.png";
-import arrow from "../../shared/assets/svg/arrow_down.svg";
+import unity_icon from '../../shared/assets/png/unity_icon.png';
+import oculus_icon from '../../shared/assets/png/oculus_icon.png';
+import vive_icon from '../../shared/assets/png/vive_icon.png';
+import unreal_icon from '../../shared/assets/png/unreal_icon.png';
+import arrow from '../../shared/assets/svg/arrow_down.svg';
 
 export const Technologies = () => {
   return (
